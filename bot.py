@@ -19,7 +19,7 @@ from openai import OpenAI
 # ==========================
 
 load_dotenv()
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
@@ -1460,4 +1460,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
