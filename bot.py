@@ -1448,12 +1448,11 @@ def main():
     # Chat IA / texto general
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    # Jobs programados
-    job = app.job_queue
-    # Descuento mensual el día 1 a las 00:00
-    job.run_daily(activar_descuento_mensual, time=dtime(hour=0, minute=0))
-    # Warm-up diario PRO, por ejemplo a las 15:00
-    job.run_daily(enviar_warmup_diario, time=dtime(hour=15, minute=0))
+   # Jobs programados (desactivados de momento)
+   # job = app.job_queue
+   # job.run_daily(activar_descuento_mensual, time=dtime(hour=0, minute=0))
+   # job.run_daily(enviar_warmup_diario, time=dtime(hour=15, minute=0))
+
 
     print("🤖 BOT FORTNITE PREMIUM RUNNING...")
     app.run_polling()
@@ -1462,3 +1461,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
